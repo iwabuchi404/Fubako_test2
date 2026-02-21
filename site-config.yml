@@ -1,0 +1,285 @@
+site:
+  name: "株式会社テクノロジーイノベーション"
+  preview_url: ""
+
+media:
+  public_path: "/uploads"
+  upload_dir: "static/uploads"
+
+content_types:
+  news:
+    label: "ニュース"
+    folder: "content/news"
+    sort: "date_desc"
+    
+    list_columns:
+      - key: "date"
+        label: "日付"
+      - key: "title"
+        label: "タイトル"
+      - key: "extra.category"
+        label: "カテゴリ"
+    
+    fields:
+      - key: "title"
+        type: "text"
+        label: "タイトル"
+        required: true
+        placeholder: "記事のタイトルを入力"
+      
+      - key: "date"
+        type: "date"
+        label: "公開日"
+        default: "today"
+      
+      - key: "draft"
+        type: "toggle"
+        label: "下書き"
+        default: false
+      
+      - key: "description"
+        type: "textarea"
+        label: "概要"
+        rows: 3
+        placeholder: "記事の概要（SEO用）"
+      
+      - key: "_content"
+        type: "markdown"
+        label: "本文"
+      
+      - key: "extra.thumbnail"
+        type: "image"
+        label: "サムネイル画像"
+      
+      - key: "extra.category"
+        type: "select"
+        label: "カテゴリ"
+        options: ["お知らせ", "プレスリリース", "イベント", "メディア掲載", "その他"]
+      
+      - key: "extra.author"
+        type: "text"
+        label: "投稿者"
+        placeholder: "例: 広報部"
+
+  cases:
+    label: "導入事例"
+    folder: "content/cases"
+    sort: "date_desc"
+    
+    list_columns:
+      - key: "date"
+        label: "公開日"
+      - key: "title"
+        label: "事例タイトル"
+      - key: "extra.industry"
+        label: "業種"
+    
+    fields:
+      - key: "title"
+        type: "text"
+        label: "事例タイトル"
+        required: true
+        placeholder: "例: 株式会社○○様 導入事例"
+      
+      - key: "date"
+        type: "date"
+        label: "公開日"
+        default: "today"
+      
+      - key: "description"
+        type: "textarea"
+        label: "概要"
+        rows: 3
+        placeholder: "導入事例の概要"
+      
+      - key: "_content"
+        type: "markdown"
+        label: "本文"
+      
+      - key: "extra.client_name"
+        type: "text"
+        label: "企業名"
+        required: true
+        placeholder: "例: 株式会社サンプル"
+      
+      - key: "extra.industry"
+        type: "select"
+        label: "業種"
+        options: ["製造業", "小売業", "サービス業", "IT・通信", "金融", "医療・福祉", "教育", "建設・不動産", "その他"]
+      
+      - key: "extra.company_size"
+        type: "select"
+        label: "企業規模"
+        options: ["1-50名", "51-100名", "101-500名", "501-1000名", "1001名以上"]
+      
+      - key: "extra.logo"
+        type: "image"
+        label: "企業ロゴ"
+      
+      - key: "extra.challenges"
+        type: "list"
+        label: "導入前の課題"
+      
+      - key: "extra.solutions"
+        type: "list"
+        label: "導入したソリューション"
+      
+      - key: "extra.results"
+        type: "list"
+        label: "導入成果"
+      
+      - key: "extra.testimonial"
+        type: "textarea"
+        label: "お客様の声"
+        rows: 4
+        placeholder: "担当者様からのコメント"
+      
+      - key: "extra.testimonial_author"
+        type: "text"
+        label: "コメント者名"
+        placeholder: "例: 山田太郎様（情報システム部長）"
+
+  services:
+    label: "サービス"
+    folder: "content/services"
+    
+    fields:
+      - key: "title"
+        type: "text"
+        label: "サービス名"
+        required: true
+      
+      - key: "description"
+        type: "textarea"
+        label: "概要"
+        rows: 3
+      
+      - key: "_content"
+        type: "markdown"
+        label: "詳細説明"
+      
+      - key: "extra.icon"
+        type: "text"
+        label: "アイコン（絵文字）"
+        placeholder: "例: 🚀"
+      
+      - key: "extra.features"
+        type: "list"
+        label: "主な機能"
+      
+      - key: "extra.price_from"
+        type: "text"
+        label: "料金（開始価格）"
+        placeholder: "例: 月額50,000円〜"
+
+  pages:
+    label: "固定ページ"
+    folder: "content/pages"
+    fields:
+      - key: "title"
+        type: "text"
+        label: "ページタイトル"
+        required: true
+        placeholder: "例: 会社概要"
+      
+      - key: "description"
+        type: "textarea"
+        label: "概要 (SEO)"
+        rows: 3
+      
+      - key: "template"
+        type: "text"
+        label: "テンプレート"
+        default: "pages/page.html"
+        readonly: true
+      
+      - key: "slug"
+        type: "text"
+        label: "カスタムURL"
+        placeholder: "about-us"
+      
+      - key: "draft"
+        type: "toggle"
+        label: "下書き"
+        default: false
+
+      - key: "_content"
+        type: "markdown"
+        label: "ページ内容"
+
+site_settings:
+  target_file: "config.toml"
+  format: "toml"
+  groups:
+    - id: "basic"
+      label: "基本設定"
+      fields:
+        - key: "title"
+          label: "サイトタイトル"
+          type: "text"
+          required: true
+        - key: "description"
+          label: "サイト説明"
+          type: "textarea"
+        - key: "base_url"
+          label: "ベースURL"
+          type: "text"
+          readonly: true
+
+    - id: "company"
+      label: "会社情報"
+      fields:
+        - key: "extra.company_name"
+          label: "会社名"
+          type: "text"
+        - key: "extra.tagline"
+          label: "キャッチフレーズ"
+          type: "text"
+        - key: "extra.founded"
+          label: "設立日"
+          type: "text"
+        - key: "extra.employees"
+          label: "従業員数"
+          type: "text"
+        - key: "extra.capital"
+          label: "資本金"
+          type: "text"
+
+    - id: "contact"
+      label: "連絡先"
+      fields:
+        - key: "extra.phone"
+          label: "電話番号"
+          type: "text"
+        - key: "extra.email"
+          label: "メールアドレス"
+          type: "text"
+        - key: "extra.address"
+          label: "住所"
+          type: "text"
+
+    - id: "social"
+      label: "SNS"
+      fields:
+        - key: "extra.twitter"
+          label: "Twitter URL"
+          type: "text"
+        - key: "extra.facebook"
+          label: "Facebook URL"
+          type: "text"
+        - key: "extra.linkedin"
+          label: "LinkedIn URL"
+          type: "text"
+
+    - id: "footer"
+      label: "フッター"
+      fields:
+        - key: "extra.footer_text"
+          label: "フッターテキスト"
+          type: "text"
+        - key: "extra.privacy_policy_url"
+          label: "プライバシーポリシーURL"
+          type: "text"
+        - key: "extra.terms_url"
+          label: "利用規約URL"
+          type: "text"

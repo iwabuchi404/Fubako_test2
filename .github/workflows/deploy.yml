@@ -1,0 +1,28 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [production]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Zola
+        uses: taiki-e/install-action@v2
+        with:
+          tool: zola@0.19.2
+
+      - name: Build
+        run: zola build --base-url https://iwabuchi404.github.io/Fubako_test2/
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public

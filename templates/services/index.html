@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}サービス | {{ config.title }}{% endblock title %}
+
+{% block content %}
+<!--
+  ================================================================
+  SERVICES LIST PAGE
+  ================================================================
+  サービス一覧ページ。
+  3つの主要サービスをカード形式で表示する。
+-->
+
+<section class="section" aria-labelledby="services-title">
+  <div class="section__inner">
+    <header class="section__header">
+      <h1 id="services-title">サービス</h1>
+      <p class="section__subtitle">デジタル変革をトータルサポートする3つのサービス</p>
+    </header>
+
+    <div class="service-cards">
+      <article class="service-card">
+        <div class="service-card__icon" role="img" aria-label="TransformX">⚡</div>
+        <h3 class="service-card__title">TransformX プラットフォーム</h3>
+        <p class="text-light">ノーコードで業務デジタル化を加速。中小企業向けDX推進SaaS。</p>
+        <div class="service-card__price">月50,000円〜</div>
+        <a href="{{ get_url(path='/services/transformx') }}" class="btn btn--primary mt-4">詳細を見る</a>
+      </article>
+      <article class="service-card">
+        <div class="service-card__icon" role="img" aria-label="AIコンサルティング">🤖</div>
+        <h3 class="service-card__title">AI活用コンサルティング</h3>
+        <p class="text-light">AIで自動化を実現。業務プロセス分析から実装まで。</p>
+        <div class="service-card__price">月額契約制</div>
+        <a href="{{ get_url(path='/services/ai-consulting') }}" class="btn btn--primary mt-4">詳細を見る</a>
+      </article>
+      <article class="service-card">
+        <div class="service-card__icon" role="img" aria-label="クラウドセキュリティ">☁️</div>
+        <h3 class="service-card__title">クラウド・セキュリティ</h3>
+        <p class="text-light">安全な移行と24時間監視。包括的なセキュリティソリューション。</p>
+        <div class="service-card__price">月額契約制</div>
+        <a href="{{ get_url(path='/services/cloud-security') }}" class="btn btn--primary mt-4">詳細を見る</a>
+      </article>
+    </div>
+  </div>
+</section>
+{% endblock content %}

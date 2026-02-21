@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
+
+{% block content %}
+<!--
+  ================================================================
+  ARTICLE DETAIL PAGE
+  ================================================================
+  ニュース記事や記事の詳細ページ。
+  ヒーロー画像、メタデータ、本文、お客様の声を表示する。
+-->
+
+<article>
+  <!-- 記事ヘッダー -->
+  <header class="article-header">
+    <!-- サムネイル画像 -->
+    {% if page.extra.thumbnail %}
+    <img src="{{ get_url(path=page.extra.thumbnail) }}" alt="{{ page.title }}">
+    {% endif %}
+
+    <!-- タイトル -->
+    <h1>{{ page.title }}</h1>
+
+    <!-- メタデータ -->
+    <div style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-3);">
+      <time class="article__time" datetime="{{ page.date }}">{{ page.date }}</time>
+      {% if page.extra.category %}
+      <span class="content-card__category">{{ page.extra.category }}</span>
+      {% endif %}
+    </div>
+  </header>
+
+  <!-- 記事本文 -->
+  <div class="article__content">
+    {{ page.content | safe }}
+  </div>
+
+  <!-- お客様の声 -->
+  {% if page.extra.testimonial %}
+  <section class="section fade-in" style="background: var(--color-bg-alt); padding: var(--space-6); border-radius: var(--radius-lg); border-left: 4px solid var(--color-secondary); box-shadow: var(--shadow-sm);">
+    <h3 style="margin-top: 0; color: var(--color-secondary);">お客様の声</h3>
+    <blockquote style="border-left: none; padding-left: 0; background: none;">
+      {{ page.extra.testimonial }}
+    </blockquote>
+    {% if page.extra.testimonial_author %}
+    <p style="text-align: right; font-weight: 600; margin-bottom: 0; color: var(--color-text);">— {{ page.extra.testimonial_author }}</p>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  <!-- 関連記事 -->
+  {% if section %}
+  <section class="section fade-in">
+    <div class="section__inner">
+      <header class="section__header">
+        <h2>関連記事</h2>
+      </header>
+      <div class="content-list" role="list">
+        {% for related in section.pages | slice(end=3) %}
+        {% if related.permalink != page.permalink %}
+        <article class="content-card" role="listitem">
+          {% if related.extra.thumbnail %}
+          <img src="{{ get_url(path=related.extra.thumbnail) }}" alt="{{ related.title }}" class="content-card__image">
+          {% endif %}
+          <div class="content-card__content">
+            <h2 class="content-card__title">
+              <a href="{{ related.permalink }}">{{ related.title }}</a>
+            </h2>
+            <div class="content-card__meta">
+              <time class="content-card__date" datetime="{{ related.date }}">{{ related.date }}</time>
+            </div>
+          </div>
+        </article>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+</article>
+{% endblock content %}

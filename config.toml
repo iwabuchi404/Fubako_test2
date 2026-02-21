@@ -1,0 +1,22 @@
+base_url = "http://localhost:1111"
+title = ""
+description = "最先端のITソリューションで、ビジネスの未来を創造します"
+default_language = "ja"
+compile_sass = true
+build_search_index = false
+
+[extra]
+company_name = "株式会社テクノロジーイノベーション"
+tagline = "Innovation for Tomorrow"
+founded = "2015年4月1日"
+employees = "150名"
+capital = "5億円"
+phone = "03-1234-5678"
+email = "info@tech-innovation.co.jp"
+address = "東京都渋谷区渋谷1-2-3 テックビル10F"
+twitter = "https://twitter.com/techinnovation"
+facebook = "https://facebook.com/techinnovation"
+linkedin = "https://linkedin.com/company/techinnovation"
+footer_text = "© 2025 株式会社テクノロジーイノベーション All Rights Reserved."
+privacy_policy_url = "/pages/privacy"
+terms_url = "/pages/terms"

@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "developBranch": "develop",
+  "productionBranch": "production",
+  "remoteUrl": "https://github.com/iwabuchi404/Fubako_test2.git",
+  "deployTarget": "github-pages",
+  "zolaVersion": "0.19.2",
+  "productionBaseUrl": "https://iwabuchi404.github.io/Fubako_test2/",
+  "previewPort": 1111
+}

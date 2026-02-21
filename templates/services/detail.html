@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
+
+{% block content %}
+<!--
+  ================================================================
+  SERVICE DETAIL PAGE
+  ================================================================
+  サービス詳細ページ。
+  概要、主な機能、料金プラン、FAQ、お問い合わせを表示する。
+-->
+
+<section class="section" aria-labelledby="service-title">
+  <div class="section__inner">
+    <header class="section__header">
+      <h1 id="service-title">{{ page.title }}</h1>
+      {% if page.description %}
+      <p class="section__subtitle">{{ page.description }}</p>
+      {% endif %}
+    </header>
+
+    <div class="article__content">
+      {{ page.content | safe }}
+    </div>
+
+    <!-- お問い合わせCTA -->
+    <section class="form fade-in" style="margin-top: var(--space-12); text-align: center;">
+      <h2 style="color: var(--color-text);">詳しく話してみませんか？</h2>
+      <p style="color: var(--color-text);">お気軽にご相談ください</p>
+      <a href="/contact" class="btn btn--primary btn--large">お問い合わせ</a>
+    </section>
+  </div>
+</section>
+{% endblock content %}

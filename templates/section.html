@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
+
+{% block content %}
+<!--
+  ================================================================
+  SECTION LIST PAGE
+  ================================================================
+  ニュースや導入事例の一覧ページ。
+  カード形式でコンテンツを一覧表示する。
+-->
+
+<section class="section" aria-labelledby="section-title">
+  <div class="section__inner">
+    <!-- セクションヘッダー -->
+    <header class="section__header">
+      <h1 id="section-title">{{ section.title }}</h1>
+      {% if section.description %}
+      <p class="section__subtitle">{{ section.description }}</p>
+      {% endif %}
+    </header>
+
+    <!-- コンテンツリスト -->
+    <div class="content-list" role="list">
+      {% for page in section.pages %}
+      <article class="content-card" role="listitem">
+        <!-- サムネイル画像 -->
+        {% if page.extra.thumbnail %}
+        <img src="{{ get_url(path=page.extra.thumbnail) }}" alt="{{ page.title }}" class="content-card__image">
+        {% endif %}
+
+        <!-- コンテンツ内容 -->
+        <div class="content-card__content">
+          <!-- タイトル -->
+          <h2 class="content-card__title">
+            <a href="{{ page.permalink }}">{{ page.title }}</a>
+          </h2>
+
+          <!-- メタデータ（日付、カテゴリ） -->
+          <div class="content-card__meta">
+            <time class="content-card__date" datetime="{{ page.date }}">{{ page.date }}</time>
+            {% if page.extra.category %}
+            <span class="content-card__category">{{ page.extra.category }}</span>
+            {% endif %}
+          </div>
+
+          <!-- 概要 -->
+          {% if page.description %}
+          <p class="content-card__description">{{ page.description }}</p>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <!-- ページネーション -->
+    {# Zolaには自動ページネーションがないため、将来的に実装 #}
+    {% if section.pages | length > 9 %}
+    <div style="display: flex; justify-content: center; gap: var(--space-2); margin-top: var(--space-8);">
+      <button class="btn btn--secondary" disabled>← 前へ</button>
+      <button class="btn btn--primary" disabled>1</button>
+      <button class="btn btn--secondary" disabled>次へ →</button>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock content %}

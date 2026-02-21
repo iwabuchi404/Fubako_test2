@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
+
+{% block content %}
+<!--
+  ================================================================
+  GENERIC PAGE
+  ================================================================
+  会社概要、プライバシーポリシー、採用情報などの静的ページ
+  ヒーローセクションと本文を表示する共通テンプレート
+-->
+
+{% if page.extra.hero_image %}
+<section class="hero" aria-labelledby="page-title">
+  <img src="{{ get_url(path=page.extra.hero_image) }}" alt="{{ page.title }}" class="hero__image">
+  <div class="hero__content">
+    <h1 id="page-title">{{ page.title }}</h1>
+    {% if page.description %}
+    <p>{{ page.description }}</p>
+    {% endif %}
+  </div>
+</section>
+{% else %}
+<section class="section" aria-labelledby="page-title">
+  <div class="section__inner">
+    <header class="section__header">
+      <h1 id="page-title">{{ page.title }}</h1>
+      {% if page.description %}
+      <p class="section__subtitle">{{ page.description }}</p>
+      {% endif %}
+    </header>
+
+    <div class="article__content">
+      {{ page.content | safe }}
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endblock content %}
