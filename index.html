@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+  
+  <meta name="description" content="最先端のITソリューションで、ビジネスの未来を創造します">
+  
+
+  <meta name="theme-color" content="#1E40AF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Zen+Maru+Gothic:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://iwabuchi404.github.io/Fubako_test2/main.css">
+  <script src="https://iwabuchi404.github.io/Fubako_test2/js/main.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="https://iwabuchi404.github.io/Fubako_test2" class="site-logo">
+        <h1 class="site-logo__title">株式会社テクノロジーイノベーション</h1>
+        <div class="site-logo__tagline">Innovation for Tomorrow</div>
+      </a>
+
+      <nav class="site-nav" role="navigation" aria-label="メインナビゲーション">
+        <a href="https://iwabuchi404.github.io/Fubako_test2" class="site-nav__link">ホーム</a>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/services" class="site-nav__link">サービス</a>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/cases" class="site-nav__link">導入事例</a>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/news" class="site-nav__link">ニュース</a>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/pages/about" class="site-nav__link">会社概要</a>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/pages/recruit" class="site-nav__link">採用情報</a>
+      </nav>
+
+      <button class="mobile-menu-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="mobile-menu-btn__icon">☰</span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav class="mobile-menu__nav" aria-label="モバイルナビゲーション">
+        <a href="https://iwabuchi404.github.io/Fubako_test2" class="mobile-menu__link">ホーム</a>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/services" class="mobile-menu__link">サービス</a>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/cases" class="mobile-menu__link">導入事例</a>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/news" class="mobile-menu__link">ニュース</a>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/pages/about" class="mobile-menu__link">会社概要</a>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/pages/recruit" class="mobile-menu__link">採用情報</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main" role="main">
+    
+<!--
+  ================================================================
+  HOME PAGE
+  ================================================================
+  トップページ。ユーザーに関心を持たせ、サービスを理解させる
+  コンテンツの流れ:
+  1. Hero - 強いメッセージとCTA
+  2. 実績数値 - 信頼性の証明
+  3. 課題カード - 共感を生む
+  4. 選ばれる理由 - 差別化
+  5. サービス概要 - 解決策の提示
+  6. お客様の声 - 社会的証明
+  7. 導入事例 - 成功事例
+  8. 最新ニュース - 最新情報
+  9. お問い合わせフォーム - 最後のCTA
+-->
+
+<!-- HERO SECTION -->
+<!-- サイトの主要メッセージとCTAを表示するヒーローセクション -->
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__content">
+    <h1 id="hero-title">DXを成功に導く<br>技術パートナー</h1>
+    
+    <div class="hero__cta" style="display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
+      <a href="#contact" class="btn btn--primary btn--large">資料請求</a>
+      <a href="#contact" class="btn btn--secondary btn--large">お問い合わせ</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- STATS SECTION -->
+<!-- 実績数値を表示し、信頼性を高める -->
+<section class="section fade-in" aria-labelledby="stats-title">
+  <div class="section__inner">
+    <div class="section__header">
+      <h2 id="stats-title">信頼の実績</h2>
+    </div>
+    <div class="stats">
+      <article class="stat-card">
+        <div class="stat-card__number" data-target="2500">0</div>
+        <div class="stat-card__label">累計導入企業数</div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-card__number" data-target="45">0</div>
+        <div class="stat-card__label">平均業務効率化率</div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-card__number" data-target="98">0</div>
+        <div class="stat-card__label">顧客満足度</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMS SECTION -->
+<!-- ユーザーの課題を提示し、共感を生む -->
+<section class="section fade-in" aria-labelledby="problems-title">
+  <div class="section__inner">
+    <div class="section__header">
+      <h2 id="problems-title">あなたの会社の課題はどれですか？</h2>
+      <p class="section__subtitle">どの課題から始めるべきか、選んでみてください</p>
+    </div>
+    <div class="problem-cards">
+      <article class="problem-card">
+        <span class="icon" role="img" aria-label="人手不足">👥</span>
+        <h3 class="problem-card__title">人手不足</h3>
+        <p class="text-light">業務の自動化で、限られた人材を最適化しましょう。</p>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/services/cloud" class="btn btn--primary mt-4">詳細を見る</a>
+      </article>
+      <article class="problem-card">
+        <span class="icon" role="img" aria-label="業務効率化">⏱️</span>
+        <h3 class="problem-card__title">業務効率化</h3>
+        <p class="text-light">ワークフローを見直し、生産性を向上させましょう。</p>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/services/cloud" class="btn btn--primary mt-4">詳細を見る</a>
+      </article>
+      <article class="problem-card">
+        <span class="icon" role="img" aria-label="データ活用">📊</span>
+        <h3 class="problem-card__title">データ活用</h3>
+        <p class="text-light">データを可視化し、意思決定の精度を高めましょう。</p>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/services/ai-ml" class="btn btn--primary mt-4">詳細を見る</a>
+      </article>
+      <article class="problem-card">
+        <span class="icon" role="img" aria-label="セキュリティ">🔒</span>
+        <h3 class="problem-card__title">セキュリティ</h3>
+        <p class="text-light">脅威を早期検知し、情報資産を守りましょう。</p>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/services/security" class="btn btn--primary mt-4">詳細を見る</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS SECTION -->
+<!-- なぜ他社ではなくこの会社なのかを訴求 -->
+<section class="section fade-in" aria-labelledby="benefits-title">
+  <div class="section__inner">
+    <div class="section__header">
+      <h2 id="benefits-title">なぜ2,500社がTransformXを選んだのか？</h2>
+    </div>
+    <div class="benefits">
+      <article class="benefit-item">
+        <div class="benefit-item__number">1</div>
+        <h3 class="benefit-item__title">導入が簡単</h3>
+        <p>専門的なIT知識は不要。ノーコードで直感的に操作できます。導入まで平均2週間。専任の成功担当者がしっかりサポート。</p>
+      </article>
+      <article class="benefit-item">
+        <div class="benefit-item__number">2</div>
+        <h3 class="benefit-item__title">ROIが見える</h3>
+        <p>1ヶ月目から効果を実感。平均で45%の業務効率化を実現。売上アップ、コストダウン、両面で成果を提供。</p>
+      </article>
+      <article class="benefit-item">
+        <div class="benefit-item__number">3</div>
+        <h3 class="benefit-item__title">サポートが手厚い</h3>
+        <p>24時間365日の問い合わせ対応。専任の成功担当者が月1回訪問。オンライントレーニングも充実。</p>
+      </article>
+      <article class="benefit-item">
+        <div class="benefit-item__number">4</div>
+        <h3 class="benefit-item__title">安心のセキュリティ</h3>
+        <p>ISO27001認証取得。データは日本国内のサーバーで保管。年2回のセキュリティ診断を無料実施。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<!-- 3つの主要サービスの概要 -->
+<section class="section fade-in" aria-labelledby="services-title">
+  <div class="section__inner">
+    <div class="section__header">
+      <h2 id="services-title">3つのサービスで、DXをトータルサポート</h2>
+    </div>
+    <div class="service-cards">
+      <article class="service-card">
+        <div class="service-card__icon" role="img" aria-label="TransformX">⚡</div>
+        <h3 class="service-card__title">TransformX プラットフォーム</h3>
+        <p class="text-light">ノーコードで業務デジタル化を加速。中小企業向けDX推進SaaS。</p>
+        <div class="service-card__price">月50,000円〜</div>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/services/cloud" class="btn btn--primary">詳細を見る</a>
+      </article>
+      <article class="service-card">
+        <div class="service-card__icon" role="img" aria-label="AIコンサルティング">🤖</div>
+        <h3 class="service-card__title">AI活用コンサルティング</h3>
+        <p class="text-light">AIで自動化を実現。業務プロセス分析から実装まで。</p>
+        <div class="service-card__price">月額契約制</div>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/services/ai-ml" class="btn btn--primary">詳細を見る</a>
+      </article>
+      <article class="service-card">
+        <div class="service-card__icon" role="img" aria-label="クラウドセキュリティ">☁️</div>
+        <h3 class="service-card__title">クラウド・セキュリティ</h3>
+        <p class="text-light">安全な移行と24時間監視。包括的なセキュリティソリューション。</p>
+        <div class="service-card__price">月額契約制</div>
+        <a href="https://iwabuchi404.github.io/Fubako_test2/services/security" class="btn btn--primary">詳細を見る</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<!-- お客様の声を表示し、信頼性を高める -->
+<section class="section fade-in" aria-labelledby="testimonials-title">
+  <div class="section__inner">
+    <div class="section__header">
+      <h2 id="testimonials-title">お客様の声</h2>
+      <p class="section__subtitle">実際に導入した企業様に伺いました</p>
+    </div>
+    <div class="testimonials" role="region" aria-label="お客様の声">
+      <article class="testimonial-card">
+        <div class="testimonial-card__logo">株式会社青山製作所</div>
+        <blockquote class="testimonial-card__quote">
+          「導入前は、在庫管理が手書きでミスが多かった。TransformXを導入してからは、リアルタイムで確認できるようになり、業務時間が40%削減できた。」
+        </blockquote>
+        <div class="testimonial-card__author">— 山田 健一様</div>
+        <div class="testimonial-card__role">生産管理部長</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES SECTION -->
+<!-- 導入事例を表示し、具体的なイメージを持たせる -->
+<section class="section fade-in" aria-labelledby="cases-title">
+  <div class="section__inner">
+    <div class="section__header">
+      <h2 id="cases-title">導入事例</h2>
+      <a href="https://iwabuchi404.github.io/Fubako_test2/cases" class="btn btn--secondary">すべての事例を見る →</a>
+    </div>
+    <div class="content-list" role="list"><article class="content-card">
+        
+        <img src="https://iwabuchi404.github.io/Fubako_test2/uploads/2026/02/dummy_172e7ba4-8e16-496a-841c-0d823e7fc19a.png" alt="さくら商事株式会社" class="content-card__image">
+        
+        <div class="content-card__content">
+          <h3 class="content-card__title">
+            <a href="https:&#x2F;&#x2F;iwabuchi404.github.io&#x2F;Fubako_test2&#x2F;cases&#x2F;sakura-shoji&#x2F;">さくら商事株式会社 様導入事例</a>
+          </h3>
+          <div class="content-card__meta">
+            
+            <span class="content-card__category">小売業</span>
+            
+            <time class="content-card__date">2025.04.20</time>
+          </div>
+          <p class="content-card__description">小売業で店舗間データ統合を実現したDX化事例</p>
+        </div>
+      </article><article class="content-card">
+        
+        <img src="https://iwabuchi404.github.io/Fubako_test2/uploads/2026/02/dummy_a43b5edb-228b-4653-87ca-be3f56e327ec.png" alt="ITソリューション株式会社" class="content-card__image">
+        
+        <div class="content-card__content">
+          <h3 class="content-card__title">
+            <a href="https:&#x2F;&#x2F;iwabuchi404.github.io&#x2F;Fubako_test2&#x2F;cases&#x2F;it-solution&#x2F;">ITソリューション株式会社 様導入事例</a>
+          </h3>
+          <div class="content-card__meta">
+            
+            <span class="content-card__category">IT・通信</span>
+            
+            <time class="content-card__date">2025.03.10</time>
+          </div>
+          <p class="content-card__description">IT企業でAIによる問い合わせ対応自動化を実現した事例</p>
+        </div>
+      </article><article class="content-card">
+        
+        <img src="https://iwabuchi404.github.io/Fubako_test2/uploads/2026/02/dummy_34039dcf-0493-41d7-b6b3-7a62e24117a4.png" alt="株式会社青山製作所" class="content-card__image">
+        
+        <div class="content-card__content">
+          <h3 class="content-card__title">
+            <a href="https:&#x2F;&#x2F;iwabuchi404.github.io&#x2F;Fubako_test2&#x2F;cases&#x2F;aoyama-seisakusho&#x2F;">株式会社青山製作所様 導入事例</a>
+          </h3>
+          <div class="content-card__meta">
+            
+            <span class="content-card__category">製造業</span>
+            
+            <time class="content-card__date">2025.06.15</time>
+          </div>
+          <p class="content-card__description">製造業の現場でTransformXを活用したDX化事例</p>
+        </div>
+      </article></div>
+  </div>
+</section>
+
+<!-- NEWS SECTION -->
+<!-- 最新ニュースを表示 -->
+<section class="section fade-in" aria-labelledby="news-title">
+  <div class="section__inner">
+    <div class="section__header">
+      <h2 id="news-title">最新ニュース</h2>
+      <a href="https://iwabuchi404.github.io/Fubako_test2/news" class="btn btn--secondary">すべてのニュースを見る →</a>
+    </div>
+    <div role="list"><article style="background: var(--color-bg-white); padding: var(--space-4); border-radius: var(--radius-lg); border: 1px solid var(--color-bg-alt); margin-bottom: var(--space-4);" role="listitem">
+        <div style="display: flex; align-items: center; gap: var(--space-2);">
+          <time style="color: var(--color-text-light); font-size: var(--font-size-sm); font-weight: 500;">2026.02.20</time>
+          
+        </div>
+        <h3 style="font-size: var(--font-size-lg); margin: var(--space-2) 0;">
+          <a href="https:&#x2F;&#x2F;iwabuchi404.github.io&#x2F;Fubako_test2&#x2F;news&#x2F;2026-02-21&#x2F;" style="color: var(--color-text); transition: color var(--transition-fast);">
+            テストニュース3
+          </a>
+        </h3>
+      </article><article style="background: var(--color-bg-white); padding: var(--space-4); border-radius: var(--radius-lg); border: 1px solid var(--color-bg-alt); margin-bottom: var(--space-4);" role="listitem">
+        <div style="display: flex; align-items: center; gap: var(--space-2);">
+          <time style="color: var(--color-text-light); font-size: var(--font-size-sm); font-weight: 500;">2026.02.15</time>
+          
+          <span style="display: inline-block; padding: 0.25rem 0.75rem; background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-light) 100%); color: white; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: 700; text-transform: uppercase;">プレスリリース</span>
+          
+        </div>
+        <h3 style="font-size: var(--font-size-lg); margin: var(--space-2) 0;">
+          <a href="https:&#x2F;&#x2F;iwabuchi404.github.io&#x2F;Fubako_test2&#x2F;news&#x2F;transformx3-release&#x2F;" style="color: var(--color-text); transition: color var(--transition-fast);">
+            TransformX 3.0をリリース — 新機能としてAI予測分析、テンプレートライブラリを追加
+          </a>
+        </h3>
+      </article><article style="background: var(--color-bg-white); padding: var(--space-4); border-radius: var(--radius-lg); border: 1px solid var(--color-bg-alt); margin-bottom: var(--space-4);" role="listitem">
+        <div style="display: flex; align-items: center; gap: var(--space-2);">
+          <time style="color: var(--color-text-light); font-size: var(--font-size-sm); font-weight: 500;">2026.02.10</time>
+          
+          <span style="display: inline-block; padding: 0.25rem 0.75rem; background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-light) 100%); color: white; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: 700; text-transform: uppercase;">イベント</span>
+          
+        </div>
+        <h3 style="font-size: var(--font-size-lg); margin: var(--space-2) 0;">
+          <a href="https:&#x2F;&#x2F;iwabuchi404.github.io&#x2F;Fubako_test2&#x2F;news&#x2F;dx-seminar&#x2F;" style="color: var(--color-text); transition: color var(--transition-fast);">
+            【無料】DXセミナー「2026年のDXトレンド」を開催します
+          </a>
+        </h3>
+      </article></div>
+  </div>
+</section>
+
+<!-- CONTACT FORM SECTION -->
+<!-- お問い合わせフォーム（最後のCTA） -->
+<section class="form fade-in" id="contact" aria-labelledby="contact-title">
+  <h2 id="contact-title">まずは無料相談から</h2>
+  <p>DXのことでお悩みなら、お気軽にご相談ください</p>
+
+  <div class="form__inner">
+    <form action="/contact" method="POST" novalidate>
+      <div class="form__group">
+        <label for="company-name" class="form__label">会社名 <span style="color: var(--color-error);">*</span></label>
+        <input
+          type="text"
+          id="company-name"
+          name="company"
+          class="form__input"
+          placeholder="例: 株式会社テスト"
+          required
+          aria-required="true"
+        >
+      </div>
+
+      <div class="form__group">
+        <label for="name" class="form__label">お名前 <span style="color: var(--color-error);">*</span></label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="form__input"
+          placeholder="例: 山田 太郎"
+          required
+          aria-required="true"
+        >
+      </div>
+
+      <div class="form__group">
+        <label for="email" class="form__label">メールアドレス <span style="color: var(--color-error);">*</span></label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form__input"
+          placeholder="example@test.com"
+          required
+          aria-required="true"
+        >
+      </div>
+
+      <div class="form__group">
+        <label for="phone" class="form__label">電話番号 <span style="color: var(--color-error);">*</span></label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          class="form__input"
+          placeholder="例: 03-1234-5678"
+          required
+          aria-required="true"
+        >
+      </div>
+
+      <div class="form__group">
+        <label for="message" class="form__label">相談内容 <span style="color: var(--color-error);">*</span></label>
+        <textarea
+          id="message"
+          name="message"
+          class="form__textarea"
+          placeholder="お問い合わせ内容をご入力ください"
+          required
+          aria-required="true"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--large btn--block">送信する</button>
+
+      <p style="margin-top: var(--space-4); font-size: var(--font-size-sm); opacity: 0.8;">
+        ※ 個人情報の取り扱いについては<a href="https://iwabuchi404.github.io/Fubako_test2/pages/privacy" style="text-decoration: underline;">プライバシーポリシー</a>をご確認ください
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- CLIENT LOGOS SECTION -->
+<!-- クライアントロゴを表示し、社会的証明を提供 -->
+<section class="section fade-in" aria-labelledby="clients-title">
+  <div class="section__inner">
+    <div class="section__header">
+      <h2 id="clients-title">信頼される企業様に選ばれています</h2>
+      <p class="section__subtitle">2,500社を超えるお客様にご利用いただいています</p>
+    </div>
+    <div style="display: flex; gap: var(--space-8); flex-wrap: wrap; justify-content: center; opacity: 0.7;">
+      <span style="font-size: var(--font-size-xl); font-weight: 700;">株式会社青山製作所</span>
+      <span style="font-size: var(--font-size-xl); font-weight: 700;">さくら商事株式会社</span>
+      <span style="font-size: var(--font-size-xl); font-weight: 700;">ITソリューション株式会社</span>
+      <span style="font-size: var(--font-size-xl); font-weight: 700;">株式会社メディカルケア</span>
+      <span style="font-size: var(--font-size-xl); font-weight: 700;">ビルメンテナンス株式会社</span>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-section">
+        <h3>会社情報</h3>
+        <ul>
+          <li>社名: 株式会社テクノロジーイノベーション</li>
+          <li>設立: 2015年4月1日</li>
+          <li>従業員数: 150名</li>
+          <li>資本金: 5億円</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>お問い合わせ</h3>
+        <ul>
+          <li>TEL: 03-1234-5678</li>
+          <li>Email: info@tech-innovation.co.jp</li>
+          <li>東京都渋谷区渋谷1-2-3 テックビル10F</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>リンク</h3>
+        <ul>
+          <li><a href="https://iwabuchi404.github.io/Fubako_test2/services">サービス</a></li>
+          <li><a href="https://iwabuchi404.github.io/Fubako_test2/cases">導入事例</a></li>
+          <li><a href="https://iwabuchi404.github.io/Fubako_test2/news">ニュース</a></li>
+          <li><a href="https://iwabuchi404.github.io/Fubako_test2/pages/privacy">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 株式会社テクノロジーイノベーション All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

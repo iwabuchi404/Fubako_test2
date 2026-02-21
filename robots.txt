@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://iwabuchi404.github.io/Fubako_test2/sitemap.xml
